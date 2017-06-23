@@ -10,7 +10,6 @@
 		70918D6C1EFD3AC200F26551 /* ScrollProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70918D621EFD3AC200F26551 /* ScrollProxy.framework */; };
 		70918D711EFD3AC200F26551 /* ScrollProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70918D701EFD3AC200F26551 /* ScrollProxyTests.m */; };
 		70918D731EFD3AC200F26551 /* ScrollProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 70918D651EFD3AC200F26551 /* ScrollProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70918D931EFD3E7800F26551 /* UIScrollView+ScrollProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70918D911EFD3E7800F26551 /* UIScrollView+ScrollProxy.m */; };
 		70918D971EFD3F8600F26551 /* ScrollProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70918D961EFD3F8600F26551 /* ScrollProxy.m */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		70918D6B1EFD3AC200F26551 /* ScrollProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70918D701EFD3AC200F26551 /* ScrollProxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollProxyTests.m; sourceTree = "<group>"; };
 		70918D721EFD3AC200F26551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70918D911EFD3E7800F26551 /* UIScrollView+ScrollProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollProxy.m"; sourceTree = "<group>"; };
 		70918D961EFD3F8600F26551 /* ScrollProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +75,6 @@
 			children = (
 				70918D651EFD3AC200F26551 /* ScrollProxy.h */,
 				70918D961EFD3F8600F26551 /* ScrollProxy.m */,
-				70918D911EFD3E7800F26551 /* UIScrollView+ScrollProxy.m */,
 				70918D661EFD3AC200F26551 /* Info.plist */,
 			);
 			path = Sources;
@@ -199,7 +196,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70918D931EFD3E7800F26551 /* UIScrollView+ScrollProxy.m in Sources */,
 				70918D971EFD3F8600F26551 /* ScrollProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

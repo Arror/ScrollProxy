@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ScrollProxy : NSProxy<OffsetChangedProtocol>
 
-- (instancetype)init;
-
 - (void)addResponder:(id<OffsetChangedProtocol> _Nullable)responder;
 
 - (void)removeResponder:(id<OffsetChangedProtocol> _Nullable)responder;
