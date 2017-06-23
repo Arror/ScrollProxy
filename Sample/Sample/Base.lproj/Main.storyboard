@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GSY-9p-m8S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSY-9p-m8S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuse" textLabel="Te3-G9-zYD" style="IBUITableViewCellStyleDefault" id="DCy-Vg-mUo">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DCy-Vg-mUo" id="DeJ-QJ-chg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -36,7 +36,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="345" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -48,33 +48,39 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="aAq-zi-8KR"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S72-On-3o1" customClass="ToTopButton" customModule="Sample" customModuleProvider="target">
-                                <rect key="frame" x="315" y="543" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.53333333329999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="1RM-Wm-CEC"/>
-                                    <constraint firstAttribute="height" constant="50" id="FtO-ou-UE4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                <state key="normal" title="To Top">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GSY-9p-m8S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2F8-rN-jWM"/>
                             <constraint firstAttribute="trailing" secondItem="GSY-9p-m8S" secondAttribute="trailing" id="Gsa-Ij-jvZ"/>
                             <constraint firstItem="GSY-9p-m8S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Snz-oD-PQ9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S72-On-3o1" secondAttribute="bottom" constant="10" id="Xkp-JG-zac"/>
-                            <constraint firstAttribute="trailing" secondItem="S72-On-3o1" secondAttribute="trailing" constant="10" id="ccV-TQ-D6b"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GSY-9p-m8S" secondAttribute="bottom" id="y4q-N7-Cho"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3yB-ZA-jib"/>
+                    <navigationItem key="navigationItem" id="3yB-ZA-jib">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="mwk-GJ-Cbx">
+                            <rect key="frame" x="187.5" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi9-9C-BAr" customClass="TitleLabel" customModule="Sample" customModuleProvider="target">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Wi9-9C-BAr" firstAttribute="leading" secondItem="mwk-GJ-Cbx" secondAttribute="leading" id="Fv3-uf-5Nm"/>
+                                <constraint firstAttribute="bottom" secondItem="Wi9-9C-BAr" secondAttribute="bottom" id="G6a-J7-5LR"/>
+                                <constraint firstItem="Wi9-9C-BAr" firstAttribute="top" secondItem="mwk-GJ-Cbx" secondAttribute="top" id="GH2-8I-FgL"/>
+                                <constraint firstAttribute="trailing" secondItem="Wi9-9C-BAr" secondAttribute="trailing" id="mDX-7i-db8"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GSY-9p-m8S" id="ORJ-Tf-XXb"/>
-                        <outlet property="toTopButton" destination="S72-On-3o1" id="Nkh-nC-hVC"/>
+                        <outlet property="titleLabel" destination="Wi9-9C-BAr" id="Vkg-Bh-SoP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,7 +95,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rhT-E9-UfT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.53333333329999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>

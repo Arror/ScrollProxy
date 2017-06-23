@@ -12,16 +12,14 @@ import ScrollProxy
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var toTopButton: ToTopButton!
+    @IBOutlet weak var titleLabel: TitleLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.rowHeight = 44.0
         
-        self.toTopButton.addTarget(self, action: #selector(ViewController.toTopButtonTapped(_:)), for: .touchUpInside)
-        
-        self.tableView.proxy.addResponder(self.toTopButton)
+        self.tableView.proxy.addResponder(self.titleLabel)
     }
     
     @objc private func toTopButtonTapped(_ sender: UIButton) {
@@ -34,6 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 20
     }
     
+    let colors: [UIColor] = [.red, .blue, .green, .cyan]
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 4
@@ -45,12 +45,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.textLabel?.text = "S: \(indexPath.section) - R: \(indexPath.row)"
         
+        cell.backgroundColor = self.colors[indexPath.row]
+        
         return cell
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
-        return .lightContent
+        return .default
     }
 }
 
@@ -62,10 +64,16 @@ extension UINavigationController {
     }
 }
 
-class ToTopButton: UIButton, OffsetChangedProtocol {
+class TitleLabel: UILabel, OffsetChangedProtocol {
     
     func offsetChanged(of scrollView: UIScrollView) {
         
-        self.isHidden = scrollView.contentOffset.y <= scrollView.bounds.height
+        guard let tableView = scrollView as? UITableView else { return }
+        
+        let first = tableView.visibleCells.first
+        
+        self.text = first?.textLabel?.text
+        
+        self.backgroundColor = first?.backgroundColor
     }
 }

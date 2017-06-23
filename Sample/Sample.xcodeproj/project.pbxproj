@@ -397,6 +397,7 @@
 				70918D271EFD39CC00F26551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
